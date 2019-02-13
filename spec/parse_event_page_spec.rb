@@ -4,6 +4,9 @@ describe ParseEventPage do
   #set up mock html file 
   subject { described_class.new('./spec/mock-event-page.html') }
 
-  describe '#extract date' do
+  describe '#extract_date' do
+    it 'returns date from html' do
+      expect(subject.extract_date).to eq('WED 13TH FEB, 2019 7:00pm')
+    end
   end
 end
