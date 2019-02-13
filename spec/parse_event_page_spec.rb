@@ -21,4 +21,10 @@ describe ParseEventPage do
       expect(subject.extract_location_and_venue).to eq(['OXFORD', 'The Bullingdon'])
     end
   end
+
+  describe '#extract_price' do
+    it 'returns price as string' do
+      expect(subject.extract_price).to eq('£13.20')
+    end
+  end
 end

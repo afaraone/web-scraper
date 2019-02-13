@@ -17,4 +17,8 @@ class ParseEventPage
   def extract_location_and_venue
     @html.css('.venue-details h2').text.split(': ')
   end
+
+  def extract_price
+    @html.css('.text-right strong').text
+  end
 end
