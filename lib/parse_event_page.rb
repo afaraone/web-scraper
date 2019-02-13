@@ -9,4 +9,8 @@ class ParseEventPage
   def extract_date
     @html.css('.venue-details h4').text
   end
+
+  def extract_artist
+    @html.css('.event-information h1').text
+  end
 end
