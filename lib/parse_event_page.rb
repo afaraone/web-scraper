@@ -4,6 +4,20 @@ require 'open-uri'
 class ParseEventPage
   def initialize(url)
     @html = Nokogiri::HTML(open(url))
+    @date = extract_date
+    @location, @venue = extract_location_and_venue
+    @artist = extract_artist
+    @price = extract_price
+  end
+
+  def return_hash
+    {
+      date: @date,
+      location: @location,
+      venue: @venue,
+      artist: @artist,
+      price: @price
+    }
   end
 
   def extract_date

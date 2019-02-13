@@ -27,4 +27,12 @@ describe ParseEventPage do
       expect(subject.extract_price).to eq('£13.20')
     end
   end
+
+  describe '#return hash' do
+    it 'returns a hash object with all details' do
+      hash = {artist: 'BEN POOLE', date: 'WED 13TH FEB, 2019 7:00pm',
+              location: 'OXFORD', venue: 'The Bullingdon', price: '£13.20'}
+      expect(subject.return_hash).to eq(hash)
+    end
+  end
 end
