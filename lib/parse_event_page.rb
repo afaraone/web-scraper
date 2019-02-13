@@ -13,4 +13,8 @@ class ParseEventPage
   def extract_artist
     @html.css('.event-information h1').text
   end
+
+  def extract_location_and_venue
+    @html.css('.venue-details h2').text.split(': ')
+  end
 end

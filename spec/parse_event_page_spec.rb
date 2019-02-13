@@ -15,4 +15,10 @@ describe ParseEventPage do
       expect(subject.extract_artist).to eq('BEN POOLE')
     end
   end
+
+  describe '#extract_location_venue' do
+    it 'returns array of location and venue' do
+      expect(subject.extract_location_and_venue).to eq(['OXFORD', 'The Bullingdon'])
+    end
+  end
 end
