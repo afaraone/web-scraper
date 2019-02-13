@@ -20,6 +20,7 @@ class ParseEventPage
     }
   end
 
+  private
   def extract_date
     @html.css('.venue-details h4').text
   end
