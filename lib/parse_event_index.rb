@@ -4,8 +4,6 @@ require_relative 'parse_event_page.rb'
 require 'json'
 
 class ParseEventIndex
-  attr_reader :html
-
   def initialize(url)
     @html = Nokogiri::HTML(open(url))
     @event_array = get_event_hashes(extract_event_urls)
